@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dynamic Workout Tracker" />
+    <title>TYW | Track Your Workout</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/output.css" />
+
+    <!-- scripts -->
+    <script src="src/js/mainScript.js" defer></script>
+    <!-- leaflet -->
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+  </head>
+  <body class="w-full font-mono bg-main/50">
+    <main class="container mx-auto p-4 grid gap-2 grid-cols-4 md:grid-cols-8">
+      <!-- User Info -->
+      <section
+        id="user"
+        class="glass relative bg-secondary shadow-lg rounded-xl p-4 text-sm grid justify-items-center text-main justify-center col-span-2 sm:col-span-2 row-start-1 row-end-1"
+      >
+        <!-- User Info -->
+        <div class="relative w-20 h-20 mx-auto mb-2">
+          <!-- صورة المستخدم -->
+          <img
+            id="user__image"
+            src="assets/icons/user.png"
+            alt="User Avatar"
+            width="20"
+            height="20"
+            class="w-full h-full rounded-full object-cover border"
+          />
+          <!-- زر تعديل الصورة -->
+          <label
+            for="upload__image"
+            class="absolute bottom-0 right-0 bg-main text-xxs p-1 rounded-full cursor-pointer"
+          >
+            <img
+              src="assets/icons/edit.png"
+              width="15"
+              height="15"
+              alt="edit button"
+            />
+          </label>
+          <input
+            type="file"
+            id="upload__image"
+            class="hidden"
+            accept="image/*"
+          />
+        </div>
+        <h2 id="user__name" class="text-xl font-bold text-main">User Name</h2>
+        <p id="user__details" class="text-center text-main">
+          <span>Age: 25</span> | <span>Height: 175cm</span> |
+          <span>Weight: 70kg</span>
+        </p>
+        <!-- <p id="user__location" class="mt-2 text-main">Location: Not</p> -->
+
+        <!-- زر تعديل البيانات -->
+        <button
+          id="edit__userInfo"
+          class="absolute top-3 right-3 bg-main  px-1 py-1 rounded-lg hover:bg-main/50"
+        >
+          <img src="assets/icons/edit.png" width="16" height="16" alt="edit button" />
+        </button>
+      </section>
+
+      <!-- Weather -->
+      <section
+        id="weatherInfo"
+        class="glass shadow-lg rounded-xl p-2 py-4 grid justify-evenly items-center col-span-2 sm:col-span-2 row-start-1 row-end-1 sm:row-start-2 sm:row-end-3"
+      >
+        <!-- Weather Info -->
+        <h3 class="text-lg text-main font-bold mb-2 text-center">Today's Weather</h3>
+        <div
+          id="weatherContent"
+          class="flex flex-col md:flex-row items-center"
+        ></div>
+      </section>
+
+      <!-- Map -->
+      <section
+        id="mapContainer"
+        class="relative glass shadow-lg rounded-xl z-0 col-span-4 sm:col-span-4 row-start-2 row-end-2 md:row-start-1 md:row-end-3 h-96 sm:h-full"
+      >
+        <div id="map" class="w-full h-full rounded-xl z-0"></div>
+      </section>
+
+      <section
+        id=""
+        class="glass shadow-lg rounded-xl p-2 col-span-4 sm:col-span-2 row-start-3 row-end-4 md:row-start-1 md:row-end-3"
+      >
+        <h2 class="text-center text-xl my-4 text-main">Activity Tracker</h2>
+        <div id="sidebar" class="h-96 overflow-y-auto overflow-x-hidden">
+          <ul id="workout-list"></ul>
+        </div>
+      </section>
+
+      <section
+        id=""
+        class="absolute right-0 md:relative rounded-xl p-2 hidden sm:block sm:col-span-1 md:row-start-3 md:row-end-4"
+      >
+        <div class="share__app grid justify-center gap-4">
+          <span
+            class="share__progress rounded-full glass shadow-lg w-12 h-12 p-1"
+          >
+            <img
+              src="assets/icons/share.png"
+              alt="share progress"
+              class="w-10"
+            />
+          </span>
+          <span
+            class="share__progress rounded-full glass shadow-lg w-12 h-12 p-1"
+          >
+            <img
+              src="assets/icons/google-play-logo.png"
+              alt="share progress"
+              class="w-10"
+            />
+          </span>
+          <span
+            class="share__progress rounded-full glass shadow-lg w-12 h-12 p-1"
+          >
+            <img
+              src="assets/icons/apple-logo.png"
+              alt="share progress"
+              class="w-10"
+            />
+          </span>
+        </div>
+      </section>
+      <section
+        id=""
+        class="glass rounded-xl p-2 col-span-2 sm:col-span-4 row-start-4 row-end-5 md:row-start-3 md:row-end-4"
+      >
+        <div class="analytics">
+          <div class="analytics__cart">chart.js</div>
+        </div>
+      </section>
+      <section
+        id=""
+        class="glass shadow-lg rounded-xl p-2 sm:col-span-3 col-span-2 row-start-4 row-end-5 md:row-start-3 md:row-end-4"
+      >
+        <div class="calories">
+          <div class="calories__chart">Calories📊</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

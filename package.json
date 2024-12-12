@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "chart.js": "^4.4.7",
+    "leaflet": "^1.9.4"
+  }
+}

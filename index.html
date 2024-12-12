@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dynamic Workout Tracker" />
+    <title>TYW | Sign Now to track Your Workout</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/output.css" />
+
+    <!-- scripts -->
+    <script src="src/js/script.js" defer></script>
+  </head>
+  <body
+    class="min-h-screen flex px-2 flex-col justify-center items-center font-inter bg-main/50"
+  >
+    <!-- <div class="flex justify-center space-x-4">
+      <button
+        class="bg-darkgreen text-xs md:text-base text-white px-2 py-1 rounded-lg"
+        data-lang="en"
+      >
+        English
+      </button>
+      <button
+        class="bg-darkgreen text-xs md:text-base text-white px-2 py-1 rounded-lg"
+        data-lang="ar"
+      >
+        العربية
+      </button>
+    </div> -->
+    <div
+      data-aos="fade-up"
+      class="sign w-full max-w-md h-full m-4 p-4 text-main shadow-lg rounded-md"
+    >
+      <h1 class="text-xl md:text-5xl font-bold text-center mt-8 mb-5">
+        User Regestration
+      </h1>
+      <form id="userForm" class="font-mono grid grid-cols-6 gap-2 items-end">
+        <div class="col-span-6">
+          <label for="name" class="block font-bold">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="w-full mt-1 text-black outline-none text-xxs md:text-base py-1 px-4 border rounded-lg"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="col-span-2">
+          <label for="age" class="block font-bold">Age</label>
+          <input
+            type="number"
+            id="age"
+            class="w-full mt-1 text-black outline-none text-xxs md:text-base py-1 px-4 border rounded-lg"
+            placeholder="your age"
+            required
+          />
+        </div>
+        <div class="col-span-2">
+          <label for="weight" class="block font-bold">Weight(kg)</label>
+          <input
+            type="number"
+            id="weight"
+            class="w-full mt-1 text-black outline-none text-xxs md:text-base py-1 px-2 border rounded-lg"
+            placeholder="your weight"
+            required
+          />
+        </div>
+        <div class="col-span-2">
+          <label for="height" class="block font-bold">Height(cm)</label>
+          <input
+            type="number"
+            id="height"
+            class="w-full mt-1 text-black outline-none text-xxs md:text-base py-1 px-2 border rounded-lg"
+            placeholder="your height"
+            required
+          />
+        </div>
+        <div class="col-span-6 grid grid-cols-6 gap-2">
+          <label for="location" class="block font-bold col-span-6"
+            >location</label
+          >
+          <input
+            type="text"
+            id="location"
+            class="w-full mt-1 text-black outline-none text-xxs md:text-base py-1 px-2 border rounded-lg col-span-4"
+            placeholder="Enter your Location"
+            required
+          />
+          <button
+            type="button"
+            id="getLocation"
+            class="mt-1 bg-main text-white text-xxs md:text-base py-1 px-1 rounded-lg col-span-2"
+          >
+            location
+          </button>
+          <p
+            id="locationStatus"
+            class="text-xs text-gray-60 py-2 mt-1 col-span-6 text-center"
+          ></p>
+        </div>
+        <button
+          data-aos="fade-up"
+          type="submit"
+          class="w-full bg-main text-white px-4 py-2 rounded-lg hover:bg-green-400 transition col-span-6"
+        >
+          Save Data
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
